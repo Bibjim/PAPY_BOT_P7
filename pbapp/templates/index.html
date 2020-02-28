@@ -7,9 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" href="../static/img/lunettes.png" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.css') }}">
     <style type="text/css"></style>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap-responsive.css') }}">
   </head>
 
   <body>
@@ -19,20 +20,28 @@
           <h1><img border="0" src="../static/img/lunettes.png" class="little_img" alt="" />  GrandPy Le Papy Robot</h1>
         </div>
         <p class="lead">Bonjour, je suis le papy robot. Le robot qui parcours le monde. </p>
-        <p class="lead">Que désires-tu voir de notre planète bleue ? </p>
+        <p class="lead">Où désires-tu allez sur notre bonne vielle planète ? </p>
+        <b>*Saisissez une ville ou une adresse de votre choix. </b>
       </div>
-
-      <div id="push"></div>
-      
+      <form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only" for="nameInput">Name</label>
+	    <input type="text" class="form-control" id="nameInput" placeholder="First Name">
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+      <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+	  <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
     </div>
+
 
     <div id="footer">
       <div class="container">
         <p class="muted credit">© Copyright 2020 / 
             <a href="https://www.linkedin.com/in/jimi-bourgeois-47254a113/">  Jimi Bourgeois</a> /
             <a href="https://github.com/Bibjim/PAPY_BOT_P7">  Github</a> /
-             <a href="https://trello.com/b/QyvrCfGq/ocp7papybot">  Trello </a> /
-             <a href="https://fr.freepik.com/photos-vecteurs-libre/technologie">Technologie vecteur créé par upklyak - fr.freepik.com</a></p>
+            <a href="https://trello.com/b/QyvrCfGq/ocp7papybot">  Trello </a> /
+            <a href="https://fr.freepik.com/photos-vecteurs-libre/technologie">Technologie vecteur créé par upklyak - fr.freepik.com</a></p>
       </div>
     </div>
 
@@ -40,10 +49,9 @@
 
     <!-- javascript
     ================================================== -->
-    <script src="{{ url_for('static', filename='js/bootstrap.js') }}" charset="utf-8"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" charset="utf-8"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}" charset="utf-8"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/request.js') }}" charset="utf-8"></script>
+
 
   </body>
 </html>
