@@ -6,7 +6,6 @@ from config import API_Key
 def get_lat_lng(apiKey, address):
     url = ('https://maps.googleapis.com/maps/api/geocode/json?address={}&key={}'
            .format(address.replace(' ', '+'), apiKey))
-    print(url)
     try:
         response = requests.get(url)
         resp_json_payload = response.json()

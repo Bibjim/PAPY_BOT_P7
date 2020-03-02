@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28f64329-2f35-439b-afd4-97994dc0c8dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbapp/API_geocoding.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/API_geocoding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/img/error.png" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/img/error.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/js/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/js/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/templates/response.html" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/templates/response.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,8 +148,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.API_geocoding (1)" />
-        <item itemvalue="Python.API_geocoding" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python.API_geocoding" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
