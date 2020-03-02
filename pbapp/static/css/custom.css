@@ -2,3 +2,17 @@
     width: 60px;
 	height: 60px;
 }
+
+.error_img {
+    width: 400px;
+	height: 400px;
+}
+
+DIV.container {
+    text-align: center;
+}
+
+DIV.margin-form {
+    margin-left: auto;
+    margin-right: auto;
+}

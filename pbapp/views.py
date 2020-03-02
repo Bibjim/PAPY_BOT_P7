@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, jsonify, request
+from pygeocoder import Geocoder
 
 app = Flask(__name__)
 
@@ -15,9 +16,8 @@ def process():
     name = request.form['name']
 
     if name:
-        newName = name
+        newName = str(name)
 
         return jsonify({'name': newName})
 
-    return jsonify({'error': 'Je suis peut-être vieux mais je ne comprend pas votre demande. '
-                             'Choisissez une ville, un lieu ou une adresse avant de valider.'})
+    return jsonify({'error': 'error name'})
