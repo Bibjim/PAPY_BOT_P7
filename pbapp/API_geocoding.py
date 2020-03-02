@@ -1,5 +1,7 @@
 import requests
 
+from config import API_Key
+
 
 def get_lat_lng(apiKey, address):
     url = ('https://maps.googleapis.com/maps/api/geocode/json?address={}&key={}'
@@ -19,7 +21,7 @@ def get_lat_lng(apiKey, address):
 
 if __name__ == '__main__':
     # get key
-    apiKey = 'AIzaSyB-wmFf8_Orjq5yvvW8GqQ9mWsRjdpxpbs'
+    apiKey = API_Key
 
     # get coordinates
     address = 'paris'

@@ -139,3 +139,5 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+# config
+config.py

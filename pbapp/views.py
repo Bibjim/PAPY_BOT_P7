@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, jsonify, request
-from pygeocoder import Geocoder
+
 
 app = Flask(__name__)
 
