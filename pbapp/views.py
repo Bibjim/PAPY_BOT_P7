@@ -19,4 +19,5 @@ def process():
 
         return jsonify({'name': newName})
 
-    return jsonify({'error': 'Missing data!'})
+    return jsonify({'error': 'Je suis peut-être vieux mais je ne comprend pas votre demande. '
+                             'Choisissez une ville, un lieu ou une adresse avant de valider.'})

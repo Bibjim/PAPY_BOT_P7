@@ -21,15 +21,14 @@
         </div>
         <p class="lead">Bonjour, je suis le papy robot. Le robot qui parcours le monde. </p>
         <p class="lead">Où désires-tu allez sur notre bonne vielle planète ? </p>
-        <b>*Saisissez une ville ou une adresse de votre choix. </b>
+        <form class="form-inline">
+	      <div class="form-group">
+	        <label class="sr-only" for="nameInput">Name</label>
+	        <input type="text" class="form-control" id="nameInput" placeholder="Ville, lieu ou adresse">
+	      </div>
+	      <button type="submit" class="btn btn-default">Allons-y !!!</button>
+	    </form>
       </div>
-      <form class="form-inline">
-	  <div class="form-group">
-	    <label class="sr-only" for="nameInput">Name</label>
-	    <input type="text" class="form-control" id="nameInput" placeholder="First Name">
-	  </div>
-	  <button type="submit" class="btn btn-default">Submit</button>
-	</form>
       <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
 	  <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
     </div>
