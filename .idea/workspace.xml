@@ -2,16 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28f64329-2f35-439b-afd4-97994dc0c8dd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pbapp/API_geocode/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pbapp/API_geocode/geocode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PAPY_BOT_P7-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PAPY_BOT_P7-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbapp/API_geocoding.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/API_geocoding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbapp/static/img/error.png" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/img/error.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/API_geocoding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap-responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/css/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/img/cute-chat-bot-cartoon-conversation-robot/License free.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/img/cute-chat-bot-cartoon-conversation-robot/License free.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/img/cute-chat-bot-cartoon-conversation-robot/License premium.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/img/cute-chat-bot-cartoon-conversation-robot/License premium.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/js/bootstrap/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/js/bootstrap/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/js/bootstrap/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/js/bootstrap/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/js/bootstrap/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/js/bootstrap/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/static/js/bootstrap/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/js/bootstrap/bootstrap.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbapp/static/js/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/js/request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbapp/templates/response.html" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/templates/response.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/templates/response.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pbapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,19 +71,7 @@
       <recent name="C:\Users\bibou\Documents\P7_papy_Bot\PAPY_BOT_P7-master\pbapp\static\js\bootstrap" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.API_geocoding (1)">
+  <component name="RunManager" selected="Python.run">
     <configuration name="API_geocoding (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PAPY_BOT_P7-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,8 +158,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.API_geocoding (1)" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python.API_geocoding (1)" />
         <item itemvalue="Python.API_geocoding" />
         <item itemvalue="Python.test" />
       </list>
@@ -169,6 +180,7 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -188,29 +200,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Inspections/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583160934102" />
+    <state x="552" y="178" key="#Other_File_Types" timestamp="1583333646144">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Other_File_Types/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583333646144" />
+    <state x="734" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583326457085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="734" y="323" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583326457085" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583334232747">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583334232747" />
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583161234546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583161234546" />
-    <state width="1899" height="457" key="GridCell.Tab.0.bottom" timestamp="1583161601227">
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1583331181780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="457" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583161601227" />
-    <state width="1899" height="457" key="GridCell.Tab.0.center" timestamp="1583161601227">
+    <state x="740" y="261" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583331181780" />
+    <state width="1899" height="350" key="GridCell.Tab.0.bottom" timestamp="1583332594060">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="457" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583161601227" />
-    <state width="1899" height="457" key="GridCell.Tab.0.left" timestamp="1583161601227">
+    <state width="1899" height="350" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583332594060" />
+    <state width="1899" height="350" key="GridCell.Tab.0.center" timestamp="1583332594059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="457" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583161601227" />
-    <state width="1899" height="457" key="GridCell.Tab.0.right" timestamp="1583161601227">
+    <state width="1899" height="350" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583332594059" />
+    <state width="1899" height="350" key="GridCell.Tab.0.left" timestamp="1583332594059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="457" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583161601227" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1583159941389">
+    <state width="1899" height="350" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583332594059" />
+    <state width="1899" height="350" key="GridCell.Tab.0.right" timestamp="1583332594059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583159941389" />
+    <state width="1899" height="350" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583332594059" />
+    <state x="788" y="156" key="SettingsEditor" timestamp="1583331262236">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="788" y="156" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1583331262236" />
   </component>
 </project>

@@ -21,16 +21,13 @@
         </div>
         <p class="lead">Bonjour, je suis le papy robot. Le robot qui parcours le monde pour vous. </p>
         <p class="lead">Où désires-tu allez sur notre bonne vielle planète ? </p>
-        <form class="form-inline">
+        <form class="form-inline" method="POST">
           <div class="margin-form">
             <label class="sr-only" for="nameInput">Name</label>
             <input type="text" class="form-control" id="nameInput" placeholder="Ville, lieu ou adresse">
             <button type="submit" class="btn btn-default">Allons-y !!!</button>
           </div>
 	    </form>
-        <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
-        <div><img id="errorAlert" class="error_img" role="alert" border="0" src="../static/img/error.png" alt=""
-                  style="display:none;"/></div>
       </div>
     </div>
 
@@ -51,7 +48,8 @@
     ================================================== -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/request.js') }}" charset="utf-8"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeT-agUpv_TLsOvRo3HxKSLaJd2WCdp1U&callback=initMap"
+    async defer></script>
 
   </body>
 </html>
