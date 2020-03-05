@@ -20,13 +20,11 @@ def get_address_gmaps(address: str) -> dict:
         lat = resp_json_payload['results'][0]['geometry']['location']['lat']
         lng = resp_json_payload['results'][0]['geometry']['location']['lng']
     except:
-        logging.warning('Google maps cannot find your address or API connection is not active')
-        return {}
-    address_coordinates = {
-        "lat": lat,
-        "lng": lng,
-        "address": address,
-    }
+        error_msg = 'Google maps cannot find your address or API connection is not active'
+        return error_msg
+
+    address_coordinates = lat, lng
+
     return address_coordinates
 
 

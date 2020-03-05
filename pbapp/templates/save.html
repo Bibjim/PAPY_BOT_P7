@@ -1,0 +1,21 @@
+    <div>
+       <h1><img border="0" src="../static/img/lunettes.png" class="little_img" alt="PapyBot Lunettes" />  GrandPy Le Papy Robot</h1>
+        <p class="lead">Bonjour, je suis le papy robot. Le robot qui parcours le monde pour vous. </p>
+        <p class="lead">Où désires-tu allez sur notre bonne vielle planète ? </p>
+    </div>
+    <form method="POST">
+          <div>
+            <input type="text" class="form-control" id="nameInput" placeholder="Ville, lieu ou adresse">
+            <button type="submit" class="btn btn-default">Allons-y !!!</button>
+          </div>
+    </form>
+
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>

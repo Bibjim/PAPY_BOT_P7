@@ -7,14 +7,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('test.html')
 
 
-@app.route('/ajax', methods=['GET', 'POST'])
+@app.route('/ajax', methods=['POST'])
 def process():
     name = request.form['name']
     if request.method == "POST":
         results = get_address_gmaps(address=name)
         print(results)
 
-        return jsonify(results)
+        return jsonify({'name': results})
+
+    return jsonify({'error': 'Google maps cannot find your address or API connection is not active'})
