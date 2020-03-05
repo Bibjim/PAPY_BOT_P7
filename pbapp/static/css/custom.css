@@ -17,6 +17,24 @@ DIV.margin-form {
     margin-right: auto;
 }
 
-#map {
+DIV.map {
     height: 50%;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /*Margin bottom by footer height*/
+  margin-bottom: 60px;
+}
+
+
+DIV.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /*Set the fixed height of the footer here*/
+  height: 0px;
 }

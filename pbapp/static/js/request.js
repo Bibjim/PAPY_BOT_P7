@@ -11,7 +11,7 @@ $(document).ready(function() {
 		})
 		event.preventDefault();
 	});
-});
+})
 
 // Google Maps init
 var lat = 48.852969;
@@ -32,7 +32,16 @@ function initMap() {
 			style: google.maps.NavigationControlStyle.ZOOM_PAN
 		}
 	});
+	$.ajax({
+	    data : results
+	    type : 'GET'
+		url : '/ajax',
+	}).done(function(data){
+			var marker = new google.maps.Marker({
+				position: {lat: results.lat, lng: results.lng)},
+				title: 'test',
+				map: map
+			});
+		}
+	});
 }
-window.onload = function(){
-	initMap();
-};

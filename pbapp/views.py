@@ -10,7 +10,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/ajax', methods=['POST'])
+@app.route('/ajax', methods=['GET', 'POST'])
 def process():
     name = request.form['name']
     if request.method == "POST":
