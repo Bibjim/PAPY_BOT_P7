@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, url_for, jsonify, request
 
 from pbapp.API_geocode.geocode import get_address_gmaps
@@ -7,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('test.html')
+    return render_template('test.html', api_key=os.getenv("API_KEY"))
 
 
 @app.route('/ajax', methods=['POST'])

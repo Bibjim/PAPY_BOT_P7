@@ -23,7 +23,7 @@ def get_address_gmaps(address: str) -> dict:
         error_msg = 'Google maps cannot find your address or API connection is not active'
         return error_msg
 
-    address_coordinates = lat, lng
+    address_coordinates = {'lat': lat, 'lng': lng}
 
     return address_coordinates
 
