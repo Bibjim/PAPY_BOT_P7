@@ -3,11 +3,11 @@
 
 // Initialize and add the map
 function initMap() {
-var myresult = {'lat': 48.856614, 'lng': 2.3522219};
+var initCoord = {'lat': 48.856614, 'lng': 2.3522219};
 var map = new google.maps.Map(
     document.getElementById('map'), {
-        zoom: 11,
-        center: myresult
+        zoom: 4,
+        center: initCoord
      });
     var marker = new google.maps.Marker({
         position: myresult,
@@ -29,8 +29,12 @@ $(document).ready(function() {
 			if (data.error) {
 				$('#errorAlert').text(data.error).show();
 				$('#successAlert').hide();
+
 			}
 			else {
+			    $('#spin').fadeIn(1000);
+			    $('#spin').fadeout(1000);
+			    $('#map').show();
 				$('#successAlert').text(data.name).show();
 				$('#errorAlert').hide();
 			}

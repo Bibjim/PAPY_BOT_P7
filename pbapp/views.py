@@ -11,7 +11,7 @@ def index():
     return render_template('test.html', api_key=os.getenv("API_KEY"))
 
 
-@app.route('/ajax', methods=['POST'])
+@app.route('/ajax', methods=['GET', 'POST'])
 def process():
     name = request.form['name']
     if request.method == "POST":
