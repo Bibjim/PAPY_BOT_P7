@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, url_for, jsonify, request
 
-from pbapp.API_geocode.geocode import get_address_gmaps
+from pbapp.main import main_app
 
 app = Flask(__name__)
 
@@ -15,9 +15,9 @@ def index():
 def process():
     name = request.form['name']
     if request.method == "POST":
-        results = get_address_gmaps(address=name)
+        results = main_app(name_input=name)
         print(results)
 
-        return jsonify({'name': results})
+        return jsonify(results)
 
     return jsonify({'error': 'Google maps cannot find your address or API connection is not active'})

@@ -27,14 +27,15 @@ $(document).ready(function() {
 		})
 		.done(function(data) {
 			if (data.error) {
+			    /*$('#spinner').fadeIn().delay(5000).fadeOut();*/
 				$('#errorAlert').text(data.error).show();
 				$('#successAlert').hide();
+				/*$('#map').hide();*/
 
 			}
 			else {
-			    $('#spin').fadeIn(1000);
-			    $('#spin').fadeout(1000);
-			    $('#map').show();
+			    /*$('#spinner').fadeIn().delay(5000).fadeOut();*/
+			    /*$('#map').show();*/
 				$('#successAlert').text(data.name).show();
 				$('#errorAlert').hide();
 			}
