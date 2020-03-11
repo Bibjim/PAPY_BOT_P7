@@ -43,9 +43,13 @@ def get_article_wiki(page_id: int) -> dict:
         resp = requests.get(url, params=params)
         resp = resp.json()
         content_wiki = resp['query']['pages'][0]['extract']
+        thumbnail_wiki = resp['query']['pages'][0]['thumbnail']['source']
     except:
-        error_msg = 'Je n\'ai pas trouvé l\'article que vous cherché'
+        error_msg = 'Je n\'ai pas compris votre question'
         return error_msg
 
-    wiki_article = {'content': content_wiki}
+    wiki_article = {
+        'content': content_wiki,
+        'thumbnail': thumbnail_wiki
+    }
     return wiki_article

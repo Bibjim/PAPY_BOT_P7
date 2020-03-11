@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 from flask import Flask, render_template, url_for, jsonify, request
 
@@ -8,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('test.html', api_key=os.getenv("API_KEY"))
+    return render_template('index.html', api_key=os.getenv("API_KEY"))
 
 
 @app.route('/ajax', methods=['GET', 'POST'])
@@ -19,5 +21,3 @@ def process():
         print(results)
 
         return jsonify(results)
-
-    return jsonify({'error': 'Google maps cannot find your address or API connection is not active'})

@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
     <title>GrandPy - PAPY ROBOT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="author" content="Jimi Bourgeois">
     <link rel="icon" type="image/png" href="../static/img/lunettes.png" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.css') }}">
-    <style type="text/css"></style>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap-responsive.css') }}">
-  </head>
-
-  <body>
-    <div id="wrap">
-      <div class="container">
-        <div class="page-header">
-          <h1><img border="0" src="../static/img/lunettes.png" class="little_img" alt="PapyBot Lunettes" />  GrandPy Le Papy Robot</h1>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><img border="0" src="../static/img/lunettes.png" class="little_img" alt="PapyBot Lunettes" />  GrandPy Le Papy Robot</h1>
+            <p class="lead">Bonjour, je suis le papy robot. Le robot qui parcours le monde pour vous. </p>
+            <p class="lead">Où désires-tu allez sur notre bonne vielle planète ? </p>
         </div>
-        <p class="lead">Bonjour, je suis le papy robot. Le robot qui parcours le monde pour vous. </p>
-        <p class="lead">Où désires-tu allez sur notre bonne vielle planète ? </p>
-        <form class="form-inline" method="POST">
-          <div class="margin-form">
-            <label class="sr-only" for="nameInput">Name</label>
-            <input type="text" class="form-control" id="nameInput" placeholder="Ville, lieu ou adresse">
+    </header>
+
+    <form method="POST">
+          <div class="container">
+            <input type="text" class="form-control" id="nameInput" placeholder="Ville, lieu ou adresse" style="text-align: center">
             <button type="submit" class="btn btn-default">Allons-y !!!</button>
           </div>
-	    </form>
-      </div>
+    </form>
+
+    <div class="container">
+        <div id="spinner" style="display : none"><img src="../static/img/spinner.gif" alt="spinner" /></div>
+        <div id="map" class="mymap"></div>
+        <div id="errorAlert" class="lead" style="display : none"><img src="../static/img/error.png" class="error_img" alt="error" /></div>
+        <div id="wiki-article" class="lead" style="display : none"></div>
+        <div id="results" class="lead" style="display : none"></div>
     </div>
-
-    <div id="map"></div>
-
 
     <div id="footer">
       <div class="container">
-        <p class="muted credit">© Copyright 2020 / 
+        <p class="muted credit">© Copyright 2020 /
             <a href="https://www.linkedin.com/in/jimi-bourgeois-47254a113/">  Jimi Bourgeois</a> /
             <a href="https://github.com/Bibjim/PAPY_BOT_P7">  Github</a> /
             <a href="https://trello.com/b/QyvrCfGq/ocp7papybot">  Trello </a> /
             <a href="https://fr.freepik.com/photos-vecteurs-libre/technologie">Technologie vecteur créé par upklyak - fr.freepik.com</a></p>
       </div>
     </div>
-
-
-
-    <!-- javascript
-    ================================================== -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/request.js') }}" charset="utf-8"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeT-agUpv_TLsOvRo3HxKSLaJd2WCdp1U&callback=initMap"
-            async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&callback=initMap"></script>
 
-  </body>
+</body>
 </html>
