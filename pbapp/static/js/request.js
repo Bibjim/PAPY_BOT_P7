@@ -3,65 +3,68 @@
 
 // Initialize and add the map
 function initMap(lat, lng) {
-    if (lat === undefined || lng === undefined) {
-        lat = 0;
-        lng = 0;
-
-    } else {
-        var myLatLng = {lat: lat, lng: lng};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 11,
-            center: myLatLng
-        });
-
-        var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        });
-    }
+	map = new google.maps.Map(document.getElementById("map"), {
+		center: new google.maps.LatLng(lat, lng),
+		zoom: 12,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		mapTypeControl: true,
+		scrollwheel: false,
+		mapTypeControlOptions: {
+			style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
+			},
+		navigationControl: true,
+		navigationControlOptions: {
+			style: google.maps.NavigationControlStyle.ZOOM_PAN
+			}
+	});
+	var icon = {
+        url: '../static/img/gmap_marker.png', // url
+        scaledSize: new google.maps.Size(70, 70), // size
+    };
+	var marker = new google.maps.Marker({
+		position: {lat: lat, lng: lng},
+		map: map,
+		title: "Coucou je suis là où vous me l'avez demandé !!!",
+		icon: icon
+	});
 }
+window.onload = function(){
+	// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+	initMap();
+};
 
-// Display for return values research user
-function displayResult(response) {
-    var lat = response.coords[0];
-    var lng = response.coords[1];
-    console.log(lat);
-    console.log(lng);
-
-    var results = $('#results');
-    results.attr("wiki-thumbnail", response.thumbnail);
-    results.attr("gmaps-coords", `${lat} ${lng}`);
-
-    $('#wiki-article').text(response.content);
-
-    initMap(lat, lng);
-}
 
 // AJAX request to retrieve the user choice to process it with flask
-$(document).ready(function(displayResult, initMap) {
+$(document).ready(function() {
 	$('form').on('submit', function(event) {
 	    var researchInput = $('#nameInput').val();
 	    $('#spinner').fadeIn().delay(4000).fadeOut();
 		$.ajax({
 			data : {
-				name : $('#nameInput').val(),
+				name : researchInput,
 			},
 			type : 'POST',
 			url : '/ajax'
 		})
-		.done(function(data, response) {
-			if (data.error) {
-				$('#errorAlert').fadeIn();
-				$('#map').hide();
-				$('#results').hide();
-				$('#wiki-article').text(response.content).hide()
+		.done(function(response) {
+			var lat = response.coords[0];
+    		var lng = response.coords[1];
+    		console.log(lat);
+    		console.log(lng);
+    		initMap(lat,lng);
+
+			if (researchInput === '') {
+				$('#errorAlert').show();
+				$('#map').fadeOut();
+				$('#wiki-article').text(response.content).fadeOut();
 
 			}
 			else {
-			    $('#map').show();
-			    $('#wiki-article').text(response.content).show();
-			    $('#results').show();
-				$('#errorAlert').hide();
+				$('#title-map').fadeOut().delay(4000).fadeIn(2000);
+			    $('#map').fadeOut().delay(4000).fadeIn(2000);
+			    $('#title-article').fadeOut().delay(4000).fadeIn(2000);
+			    $('#wiki-article').text(response.content).fadeOut().delay(4000).fadeIn(2000);
+				$('#errorAlert').fadeOut();
 			}
 		});
 		event.preventDefault();

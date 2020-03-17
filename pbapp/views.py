@@ -21,3 +21,5 @@ def process():
         print(results)
 
         return jsonify(results)
+
+    return jsonify({'error': 'Je n\'ai pas compris votre question'})

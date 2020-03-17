@@ -21,7 +21,7 @@ def main_app(name_input: str) -> dict:
         final_data['content'] = wiki_article['content']
         final_data['thumbnail'] = wiki_article['thumbnail']
     except:
-        error_msg = 'Je n\'ai pas compris votre question'
+        error_msg = {'error': 'Je n\'ai pas compris votre question'}
         return error_msg
 
     return final_data
