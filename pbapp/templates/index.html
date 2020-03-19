@@ -21,10 +21,12 @@
 
         <form method="POST">
             <div class="container">
-                <p class="lead">Bonjour, je suis GrandPy, le papy robot qui parcours le monde pour vous.
+                <p class="lead">Bonjour, je suis GrandPy, le papy robot qui parcours le monde pour vous. Si je vous dis
                     Où désirez-vous allez sur notre bonne vielle planète ? </p>
-                <input type="text" class="form-control" id="nameInput" placeholder="Ville, lieu ou adresse" style="text-align: center">
-                <button type="submit" class="btn btn-default">Allons-y !!!</button>
+                <div class="margin-form">
+                    <input type="text" class="form-control" id="nameInput" placeholder="Ville, lieu ou adresse" style="text-align: center">
+                    <button type="submit" class="btn btn-default">Allons-y !!!</button>
+                </div>
             </div>
         </form>
 
@@ -32,7 +34,7 @@
     <div class="container">
         <div id="spinner" style="display : none"><img src="../static/img/spinner.gif" alt="spinner" class="spinner_img" /></div>
          <BR CLEAR="all">
-        <div id="title-map" style="display : none">
+        <div id="title-map" class="ombreouts" style="display : none">
             <p class="lead">J'ai trouvé votre recherche sur la carte ...</p>
         </div>
         <div id="map" style="display : none"></div>
@@ -40,7 +42,9 @@
         <div id="title-article" style="display : none">
             <p class="lead">Et est-ce que vous saviez ? ...</p>
         </div>
-        <div id="wiki-article" class="ombreout" style="display : none"></div>
+        <div id="wiki-article"  class="lead" style="display : none"></div>
+         <BR CLEAR="all">
+        <div id="wiki-photo" style="display : none"></div>
         <div id="errorAlert" class="lead" style="display : none"><img src="../static/img/error.png" class="error_img" alt="error" /></div>
     </div>
 

@@ -33,12 +33,12 @@ window.onload = function(){
 	initMap();
 };
 
-
 // AJAX request to retrieve the user choice to process it with flask
 $(document).ready(function() {
 	$('form').on('submit', function(event) {
 	    var researchInput = $('#nameInput').val();
 	    $('#spinner').fadeIn().delay(4000).fadeOut();
+	    $('#wiki-photo').fadeOut();
 		$.ajax({
 			data : {
 				name : researchInput,
@@ -49,8 +49,13 @@ $(document).ready(function() {
 		.done(function(response) {
 			var lat = response.coords[0];
     		var lng = response.coords[1];
+    		var myImg = new Image();
+            myImg.src = response.thumbnail;
+            // log
     		console.log(lat);
     		console.log(lng);
+    		console.log(myImg);
+            // log
     		initMap(lat,lng);
 
 			if (researchInput === '') {
@@ -58,12 +63,14 @@ $(document).ready(function() {
 				$('#map').fadeOut();
 				$('#wiki-article').text(response.content).fadeOut();
 
+
 			}
 			else {
 				$('#title-map').fadeOut().delay(4000).fadeIn(2000);
 			    $('#map').fadeOut().delay(4000).fadeIn(2000);
 			    $('#title-article').fadeOut().delay(4000).fadeIn(2000);
 			    $('#wiki-article').text(response.content).fadeOut().delay(4000).fadeIn(2000);
+			    $('#wiki-photo').append(myImg).fadeOut().delay(4000).fadeIn(2000);
 				$('#errorAlert').fadeOut();
 			}
 		});
