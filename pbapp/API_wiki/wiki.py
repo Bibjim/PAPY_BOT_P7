@@ -18,6 +18,7 @@ def get_id_wiki(lat: Union[int, float], lng: Union[int, float]) -> int:
     try:
         return_id = requests.get(url, params=params)
         wiki_id = return_id.json()['query']['geosearch'][0]['pageid']
+        print(wiki_id)
     except:
         error_msg = 'Je n\'ai pas trouvé la page wiki'
         return error_msg
@@ -43,13 +44,11 @@ def get_article_wiki(page_id: int) -> dict:
         resp = requests.get(url, params=params)
         resp = resp.json()
         content_wiki = resp['query']['pages'][0]['extract']
-        thumbnail_wiki = resp['query']['pages'][0]['thumbnail']['source']
     except:
-        error_msg = 'Je n\'ai pas compris votre question'
+        error_msg = 'je ne trouve pas l\'article wiki'
         return error_msg
 
     wiki_article = {
-        'content': content_wiki,
-        'thumbnail': thumbnail_wiki
+        'content': content_wiki
     }
     return wiki_article

@@ -37,43 +37,37 @@ window.onload = function(){
 $(document).ready(function() {
 	$('form').on('submit', function(event) {
 	    var researchInput = $('#nameInput').val();
-	    $('#spinner').fadeIn().delay(4000).fadeOut();
-	    $('#wiki-photo').fadeOut();
-		$.ajax({
-			data : {
-				name : researchInput,
-			},
-			type : 'POST',
-			url : '/ajax'
-		})
-		.done(function(response) {
-			var lat = response.coords[0];
-    		var lng = response.coords[1];
-    		var myImg = new Image();
-            myImg.src = response.thumbnail;
-            // log
-    		console.log(lat);
-    		console.log(lng);
-    		console.log(myImg);
-            // log
-    		initMap(lat,lng);
-
-			if (researchInput === '') {
-				$('#errorAlert').show();
-				$('#map').fadeOut();
-				$('#wiki-article').text(response.content).fadeOut();
-
-
-			}
-			else {
-				$('#title-map').fadeOut().delay(4000).fadeIn(2000);
-			    $('#map').fadeOut().delay(4000).fadeIn(2000);
-			    $('#title-article').fadeOut().delay(4000).fadeIn(2000);
-			    $('#wiki-article').text(response.content).fadeOut().delay(4000).fadeIn(2000);
-			    $('#wiki-photo').append(myImg).fadeOut().delay(4000).fadeIn(2000);
-				$('#errorAlert').fadeOut();
-			}
-		});
-		event.preventDefault();
+	    $('#response-none').fadeOut()
+	    $('#main-title').fadeOut();
+	    $('#spinner').fadeIn(2000).delay(4000).fadeOut();
+			$.ajax({
+				data: {
+					name: researchInput,
+				},
+				type: 'POST',
+				url: '/ajax'
+			})
+				.done(function(response) {
+				    // log
+				    console.log(response);
+				    // log
+				    if (response.error) {
+					    $('#response-none').delay(5000).fadeIn(2000);
+					    $('#response-research').delay(5000).fadeOut();
+					    $('#wiki-article').delay(5000).fadeOut();
+					}
+					else {
+					    var lat = response.coords[0];
+					    var lng = response.coords[1];
+					    // log
+					    console.log(lat);
+					    console.log(lng);
+					    // log
+					    initMap(lat, lng);
+					    $('#response-research').delay(5000).fadeIn(2000);
+					    $('#wiki-article').text(response.content).delay(5000).fadeIn(2000);
+					}
+				});
+			event.preventDefault();
 	});
 });

@@ -17,14 +17,18 @@ def get_address_gmaps(address: str) -> dict:
            .format(address.replace(' ', '+'), apiKey))
     try:
         response = requests.get(url)
-        resp_json_payload = response.json()
-        lat = resp_json_payload['results'][0]['geometry']['location']['lat']
-        lng = resp_json_payload['results'][0]['geometry']['location']['lng']
+        # print(response)
+        resp_json = response.json()
+        # print(resp_json)
+        lat = resp_json['results'][0]['geometry']['location']['lat']
+        lng = resp_json['results'][0]['geometry']['location']['lng']
     except:
-        error_msg = 'Google maps cannot find your address or API connection is not active'
+        error_msg = 'Google maps ne trouve pas les coordonnées GPS' \
+                    'ou la connexion à l\'API ne fonctionne pas'
         return error_msg
 
     address_coordinates = {'lat': lat, 'lng': lng}
+    print(address_coordinates)
 
     return address_coordinates
 
