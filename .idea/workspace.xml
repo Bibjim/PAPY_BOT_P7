@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28f64329-2f35-439b-afd4-97994dc0c8dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pbapp/API_geocode/geocode_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pbapp/API_wiki/wiki_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/save.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pbapp/static/js/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbapp/API_geocode/geocode.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/API_geocode/geocode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbapp/API_wiki/wiki.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/API_wiki/wiki.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbapp/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbapp/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pbapp/API_geocode/geocode_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/API_geocode/geocode_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbapp/static/js/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/static/js/request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pbapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pbapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pbapp/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +63,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.geocode_test">
+  <component name="RunManager" selected="Python.run">
     <configuration name="API_geocoding (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PAPY_BOT_P7-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,9 +174,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run" />
         <item itemvalue="Python.geocode_test" />
         <item itemvalue="Python.wiki_test" />
-        <item itemvalue="Python.run" />
         <item itemvalue="Python.wiki" />
         <item itemvalue="Python.API_geocoding (1)" />
       </list>

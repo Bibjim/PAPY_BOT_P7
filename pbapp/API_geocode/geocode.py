@@ -28,7 +28,7 @@ def get_address_gmaps(address: str) -> dict:
         return error_msg
 
     address_coordinates = {'lat': lat, 'lng': lng}
-    print(address_coordinates)
+    # print(address_coordinates)
 
     return address_coordinates
 
