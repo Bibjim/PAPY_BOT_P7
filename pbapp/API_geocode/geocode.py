@@ -1,40 +1,24 @@
 # -*- coding: utf-8 -*-
 
 import os
-
-import requests
-
-apiKey = os.getenv("API_KEY")
+import geocoder
 
 
-def get_address_gmaps(address, apiKey):
-    """
-    Connection to the Google maps API
-    Conversion of the data '#nameInput' to GPS coordinate
-    :param address: data request AJAX with flask method 'POST'
-    :return: coordinates
-    """
+class GeoMaps:
 
-    url = ('https://maps.googleapis.com/maps/api/geocode/json?address={}&key={}'
-           .format(address, apiKey))
+    def __init__(self):
+        # self.apikey = os.getenv("API_KEY")
+        self.apikey = "AIzaSyDeT-agUpv_TLsOvRo3HxKSLaJd2WCdp1U"
 
-    response = requests.get(url)
-    # print(response)
-    resp_json = response.json()
-    print(resp_json)
-    # lat = resp_json['results'][0]['geometry']['location']['lat']
-    print(type(resp_json['results'][0]['geometry']['location']['lat']))
-    # lng = resp_json['results'][0]['geometry']['location']['lng']
-    print(resp_json['results'][0]['geometry']['location']['lng'])
-    lat = 48.5734053
-    lng = 7.752111299999999
+    def get_address_gmaps(self, adress):
+        response = geocoder.google(adress, key=self.apikey)
+        if response.ok:
+            resp_json = response.json
+            lat = resp_json["lat"]
+            lng = resp_json["lng"]
+            print("lat : ", lat)
+            print("lng : ", lng)
+            return lat, lng
+        else:
+            return None
 
-    address_coordinates = {'lat': lat, 'lng': lng}
-
-    print(address_coordinates)
-
-    return address_coordinates
-
-
-if __name__ == '__main__':
-    pass

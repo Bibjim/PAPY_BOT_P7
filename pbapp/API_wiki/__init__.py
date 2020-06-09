@@ -1,1 +1,1 @@
-from .wiki import *
+from .wiki import Wiki

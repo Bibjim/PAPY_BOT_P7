@@ -1,54 +1,41 @@
 # -*- coding: utf-8 -*-
 
 import requests
-from typing import Union
-
-url = "https://fr.wikipedia.org/w/api.php"
 
 
-def get_id_wiki(lat: Union[int, float], lng: Union[int, float]) -> int:
-    params = {
-        'action': 'query',
-        'list': 'geosearch',
-        'gsradius': 10000,
-        'gscoord': f'{lat}|{lng}',
-        'format': 'json',
-        'formatversion': 2
-    }
-    try:
-        return_id = requests.get(url, params=params)
-        wiki_id = return_id.json()['query']['geosearch'][0]['pageid']
-        print(wiki_id)
-    except:
-        error_msg = 'Je n\'ai pas trouvé la page wiki'
-        return error_msg
+class Wiki:
+    def __init__(self):
+        self.url = "https://fr.wikipedia.org/w/api.php"
 
-    page_id = wiki_id
-    return page_id
+    def get_page_id_wiki(self, lat, lng):
+        param_lat_lng = "|".join([str(lat), str(lng)])
+        params = {
+            'action': 'query',
+            'list': 'geosearch',
+            'gsradius': 10000,
+            'gscoord': param_lat_lng,
+            'format': 'json',
+        }
 
+        return_id = requests.get(self.url, params=params)
+        page_id = return_id.json()['query']['geosearch'][0]['pageid']
+        print("Id : ", page_id)
+        return page_id
 
-def get_article_wiki(page_id: int) -> dict:
-    params = {
-        'action': 'query',
-        'prop': 'info|extracts|pageimages',
-        'inprop': 'url',
-        'explaintext': '',
-        'exintro': 1,
-        'exsectionformat': 'plain',
-        'format': 'json',
-        'formatversion': 2,
-        'pageids': page_id,
-        'pithumbsize': 500
-    }
-    try:
-        resp = requests.get(url, params=params)
+    def get_article_wiki(self, id):
+        params = {
+            "action": "query",
+            "format": "json",
+            "prop": "extracts",
+            "exintro": "1",
+            "explaintext": "1",
+            "indexpageids": 1,
+            "exsentences": "5",
+            "pageids": id,
+        }
+
+        resp = requests.get(self.url, params=params)
         resp = resp.json()
-        content_wiki = resp['query']['pages'][0]['extract']
-    except:
-        error_msg = 'je ne trouve pas l\'article wiki'
-        return error_msg
-
-    wiki_article = {
-        'content': content_wiki
-    }
-    return wiki_article
+        content_wiki = resp['query']['pages'][str(id)]['extract']
+        print("wiki : ", content_wiki)
+        return content_wiki

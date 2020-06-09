@@ -1,1 +1,1 @@
-from .geocode import get_address_gmaps
+from .geocode import GeoMaps
