@@ -4,78 +4,59 @@
     <title>GrandPy - PAPY ROBOT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="description" content="">
     <meta name="author" content="Jimi Bourgeois">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="icon" type="image/png" href="../static/img/lunettes.png" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.css') }}">
 </head>
 <body>
-    <header>
-        <div>
-            <h1 class="text-header"><img border="0" src="../static/img/lunettes.png" class="little_img" alt="PapyBot Lunettes" />  GrandPy Le Papy Robot</h1>
-        </div>
-    </header>
+<header>
+    <h1 class="text-header"><img border="0" src="../static/img/lunettes.png" class="little_img" alt="PapyBot Lunettes" />  GrandPy Le Papy Robot</h1>
+</header>
+<br>
 
-    <BR CLEAR="all">
+<div class="container">
+    <section id="main-title">
+        <p class="lead">Bonjour, je suis GrandPy, le papy robot qui parcours le monde pour vous.</p>
+        <p class="lead">Si je vous dit que je peux retrouver n'importe quel endroit sur terre vous me croyez ??? Et bien je suis le Robot de la situation !!!</p>
+        <img src="../static/img/lunettes.png" class="main_img" alt="main_img" />
+        <p class="lead">Où désirez-vous allez sur notre bonne vielle planète ? </p>
+    </section>
 
-    <div id="main-title">
-        <div class="container">
-            <p class="lead">Bonjour, je suis GrandPy, le papy robot qui parcours le monde pour vous.</p>
-            <p class="lead">Si je vous dit que je peux retrouver n'importe quel endroit sur terre vous me croyez ??? Et bien je suis le Robot de la situation !!!</p>
-            <img src="../static/img/lunettes.png" class="main_img" alt="main_img" />
-            <p class="lead">Où désirez-vous allez sur notre bonne vielle planète ? </p>
-        </div>
-    </div>
-
-    <section id="response-research">
+    <section id="response-research" style="display : none">
 
     </section>
 
-    <div id="response-none" style="display : none">
-        <div class="container">
-            <BR CLEAR="all">
-            <img src="../static/img/error.png" class="error_img" alt="error" /></div>
-            <BR CLEAR="all">
+    <br>
+    <section id="spinner" style="display : none">
+        <br>
+        <img src="../static/img/spinner.gif" alt="spinner" class="spinner_img" />
+        <br>
+    </section>
+    <br>
+    <form method="POST">
+        <div class="margin-form">
+            <input type="text" class="form-control" id="nameInput" placeholder="Ville, lieu ou adresse" style="text-align: center">
+            <button type="submit" class="btn btn-default">Allons-y !!!</button>
         </div>
-    </div>
+    </form>
+    <br>
+</div>
 
-    <BR CLEAR="all">
-
-    <div id="spinner" style="display : none">
-        <div class="container">
-            <BR CLEAR="all">
-            <img src="../static/img/spinner.gif" alt="spinner" class="spinner_img" />
-            <BR CLEAR="all">
-        </div>
-    </div>
-
-    <BR CLEAR="all">
-
-        <form method="POST">
-            <div class="container">
-                <div class="margin-form">
-                    <input type="text" class="form-control" id="nameInput" placeholder="Ville, lieu ou adresse" style="text-align: center">
-                    <button type="submit" class="btn btn-default">Allons-y !!!</button>
-                </div>
-            </div>
-        </form>
-
-    <BR CLEAR="all">
-
-    <div id="footer">
-      <div class="esp-img">
-        <p class="">© Copyright 2020 / Projet étudiant Openclassroom
-            <BR CLEAR="all">
+<div id="footer">
+    <div class="esp-img">
+        <p>© Copyright 2020 / Projet étudiant Openclassroom
+            <br>
             <a href="https://www.linkedin.com/in/jimi-bourgeois-47254a113/"><img border="0" src="../static/img/in.png" class="in_img" alt="in_logo" /></a>
             <a href="https://github.com/Bibjim/PAPY_BOT_P7"><img border="0" src="../static/img/github.png" class="github_img" alt="github_logo" /></a>
             <a href="https://trello.com/b/QyvrCfGq/ocp7papybot"><img border="0" src="../static/img/trello.png" class="trello_img" alt="trello_logo" /></a>
-            <a href="https://fr.freepik.com/photos-vecteurs-libre/technologie"><img border="0" src="../static/img/freepix.png" class="freepix_img" alt="freepix_logo" /></a></p>
-      </div>
+            <a href="https://fr.freepik.com/photos-vecteurs-libre/technologie"><img border="0" src="../static/img/freepix.png" class="freepix_img" alt="freepix_logo" /></a>
+        </p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/request.js') }}" charset="utf-8"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&callback=initMap"></script>
-
+</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/request.js') }}" charset="utf-8"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&callback=initMap"></script>
 </html>

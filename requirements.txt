@@ -1,0 +1,4 @@
+pytest
+Flask
+geocoder
+requests

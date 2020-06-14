@@ -15,18 +15,28 @@ $(document).ready(function() {
 
     $("form").submit(function (event) {
         $('#spinner').fadeIn(2000).delay(4000).fadeOut();
-        $('#response-research').append('<div id="map" class"container"></div>').delay(5000).fadeIn(2000);
-        $('#response-research').append('<div id="wiki" class="lead"></div>').delay(5000).fadeIn(2000);
+        $('#response-research').delay(4000).fadeIn(2000);
+        $('#response-research').append('<br>');
+        $('#response-research').append('<div class="map" style="height: 400px;"></div>');
+        $('#response-research').append('<br>');
+        $('#response-research').append('<div class="wiki"></div>');
+        $('#response-research').append('<br>');
+        $('#response-research').append('<p class="lead">Voulez-vous faire une autre recherche ? </p>');
         var maps = $('.map').last();
         var wiki = $('.wiki').last();
         event.preventDefault();
         let query = $("input").val();
-        $.post('/ajax', {
-				query : query
+        $.ajax({
+            data : {
+                query : query
+            },
+            type : 'POST',
+            url : '/ajax'
 		}).done(function (response) {
-            maps.show();
-            initMap(parseFloat(response['lat']), parseFloat(response['lng']));
-            wiki.text(response['content']);
+		    maps.show();
+		    initMap(parseFloat(response['lat']), parseFloat(response['lng']));
+		    wiki.text(response['content']);
+
         })
     });
 });

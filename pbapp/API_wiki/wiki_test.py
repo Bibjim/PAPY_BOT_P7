@@ -20,11 +20,11 @@ def test_apiwiki_get_page_id_offline(monkeypatch):
     result = {
         'query': {
             'geosearch':
-            [
-                {
-                    'pageid': 12
-                }
-            ]
+                [
+                    {
+                        'pageid': 12
+                    }
+                ]
         }
     }
 
@@ -65,9 +65,9 @@ def test_apiwiki_get_extract_offline(monkeypatch):
             'pages': {
                 '12': {
                     'canonicalurl':
-                    'https://fr.wikipedia.org/wiki/Tour_Eiffel',
+                        'https://fr.wikipedia.org/wiki/Tour_Eiffel',
                     'extract':
-                    'La tour du Mordor'
+                        'La tour du Mordor'
                 }
             }
         }
