@@ -10,6 +10,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
+@app.route('/index/')
 def index():
     """Returns the index.html page and the Google API key"""
     return render_template('index.html', api_key=os.getenv("API_KEY"))
