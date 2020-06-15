@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28f64329-2f35-439b-afd4-97994dc0c8dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/PAPY_BOT_P7-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PAPY_BOT_P7-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +23,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YLSP82STXLDIKdd7mZK5O6lI4s" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -190,7 +195,7 @@
       <workItem from="1591438253389" duration="3935000" />
       <workItem from="1591612368556" duration="22261000" />
       <workItem from="1592050085768" duration="19797000" />
-      <workItem from="1592212561566" duration="3885000" />
+      <workItem from="1592212561566" duration="4526000" />
     </task>
     <task id="LOCAL-00001" summary="add file">
       <created>1592212875066</created>
@@ -232,10 +237,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add file" />
     <option name="LAST_COMMIT_MESSAGE" value="add file" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="732" y="248" key="#index.html" timestamp="1592216488129">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="732" y="248" key="#index.html/-1080.-821.1080.1890/0.30.1920.1050@0.30.1920.1050" timestamp="1592216488129" />
     <state x="-915" y="-308" key="CommitChangelistDialog2" timestamp="1592212874316">
       <screen x="-1080" y="-821" width="1080" height="1890" />
     </state>
