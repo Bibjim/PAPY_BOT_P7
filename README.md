@@ -5,7 +5,7 @@
 This Openclassroom project consists of creating a website with the Flask framework.
 The principle of the GrandPy the Papy robot website is to ask the Papy bot for a place, a city or an address and it
 displays a map and an article corresponding to your request.
-(https://world.openfoodfacts.org/)
+(https://papybot-grandgy.herokuapp.com/)
 
 Clone or download this project in your computer: https://github.com/Bibjim/PAPY_BOT_P7.git
 
